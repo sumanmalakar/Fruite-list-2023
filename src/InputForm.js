@@ -13,11 +13,11 @@ const submitHandler = (e) =>{
     name: name,
     price:price,
     img:img,
-    id:Math.random()
+    id:Math.floor((Math.random() * 100) + 1)
   }
 
   setList(item)
-  addList(list);
+  addList(item);
 }
  
   return(

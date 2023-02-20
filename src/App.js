@@ -22,6 +22,11 @@ export default function App() {
   const addList = (listItem)=>{
        setList([...list, listItem]);
   }
+  const deleteList = (id) =>{
+    setList(
+      list.filter((e)=>{e.id !=id})
+    )
+  }
   return (
     <>
     <div className="container my-3">
@@ -35,7 +40,7 @@ export default function App() {
            price={e.price}
             name={e.name} 
             img={e.img}
-            
+            deleteList={deleteList}
              />
        )
      })
